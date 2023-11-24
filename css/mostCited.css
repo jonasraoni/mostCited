@@ -1,0 +1,43 @@
+.most-cited-author {
+	font-size: 13px;
+	min-width: 100%;
+	display: grid;
+	grid-template-columns: 1fr fit-content(250px);
+}
+
+.most-cited-title a {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 700;
+	text-decoration: none;
+	margin-bottom: 50px;
+}
+
+.most-cited-content:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.most-cited-content .most-cited-subtitle {
+	margin-bottom: 5px;
+}
+
+.most-cited-author > div:first-child {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.most-cited-headline {
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 0;
+	font-family: Lato, sans-serif;
+	font-size: 16px !important;
+	font-weight: 700;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.page_index_journal > .most-cited {
+	margin-bottom: 20px;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * scheduledTasks.xml
+  *
+  * Copyright (c) 2023 Simon Fraser University
+  * Copyright (c) 2023 John Willinsky
+  *
+  * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+  *
+  * This file describes the schedule task which will retrieve citation metrics from the configured provider in the background.
+  -->
+
+<!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
+
+<scheduled_tasks>
+	<task class="APP\plugins\generic\mostCited\classes\tasks\Synchronizer">
+		<descr>Extract, transform and load citation statistics data into the database.</descr>
+		<frequency day="1"/>
+	</task>
+</scheduled_tasks>
