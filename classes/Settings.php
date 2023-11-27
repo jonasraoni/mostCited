@@ -31,8 +31,7 @@ class Settings
         public ?int $quantity = null,
         public ?int $position = null,
         public ?array $header = null
-    )
-    {
+    ) {
     }
 
     /**
@@ -100,7 +99,7 @@ class Settings
     /**
      * Creates a new instance
      */
-    static public function create(): static
+    public static function create(): static
     {
         return new static();
     }

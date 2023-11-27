@@ -22,8 +22,10 @@ interface ProviderInterface
 {
     /**
      * Retrieve the citation count for the given DOI
+     *
      * @param string $doi The DOI to process
      * @param Settings $settings The plugin settings
+     *
      * @return int The citation count
      */
     public function getCitationCount(string $doi, Settings $settings): int;

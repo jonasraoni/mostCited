@@ -26,7 +26,6 @@ class GenerateCache extends BaseJob
 
     /**
      * Constructor
-     * @param int $contextId
      */
     public function __construct(protected int $contextId)
     {

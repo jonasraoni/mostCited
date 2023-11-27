@@ -26,7 +26,6 @@ class MostCitedSubmissions
 {
     /**
      * Create a new job instance
-     * @param int $contextId
      */
     public function __construct(protected int $contextId)
     {

@@ -29,6 +29,7 @@ class SynchronizeCitations extends BaseJob
 
     /**
      * Constructor
+     *
      * @param int[] $submissionIds
      */
     public function __construct(protected int $contextId, protected array $submissionIds)

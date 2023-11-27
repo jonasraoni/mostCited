@@ -43,7 +43,8 @@ class MostCitedPlugin extends GenericPlugin
     /**
      * Constructor
      */
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
         self::$instance ??= $this;
     }
@@ -71,6 +72,7 @@ class MostCitedPlugin extends GenericPlugin
 
     /**
      * Retrieve the class names of available citation providers
+     *
      * @return class-string<ProviderInterface>[]
      */
     public static function getProviders(): array

@@ -33,7 +33,7 @@ class Crossref implements ProviderInterface
         $user = $settings->crossrefUser ?? null;
         $password = $settings->crossrefPassword ?? null;
         if (empty($user) || empty($password) || empty($doi)) {
-            throw new InvalidArgumentException("Credentials or DOI missing");
+            throw new InvalidArgumentException('Credentials or DOI missing');
         }
         $url = sprintf(static::API_URL, urlencode($user), urlencode($password), urlencode($doi));
         $data = HttpClient::get($url, 'application/json');

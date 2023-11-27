@@ -63,6 +63,9 @@ class SettingsForm extends Form
 
     /**
      * @copydoc Form::fetch()
+     *
+     * @param null|mixed $template
+     *
      * @throws Exception
      */
     public function fetch($request, $template = null, $display = false): ?string
