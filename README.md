@@ -1,10 +1,13 @@
 # Most Cited plugin
+
 [![Build Status](https://travis-ci.com/jonasraoni/mostCited.svg?branch=master)](https://travis-ci.com/jonasraoni/mostCited)
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/jonasraoni/mostCited?include_prereleases&label=latest%20release)
+[![OJS compatibility](https://img.shields.io/badge/ojs-3.4-brightgreen)](https://github.com/pkp/ojs/tree/stable-3_4_0)
+[![GitHub release](https://img.shields.io/github/v/release/jonasraoni/mostCited?include_prereleases&label=latest%20release)](https://github.com/jonasraoni/mostCited/releases)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jonasraoni/mostCited)
-![GitHub](https://img.shields.io/github/license/jonasraoni/mostCited)
-[![OJS-Version](https://img.shields.io/badge/pkp--ojs-3.4--x-brightgreen)](https://github.com/pkp/ojs/tree/stable-3_4_0)
-![GitHub All Releases](https://img.shields.io/github/downloads/jonasraoni/mostCited/total)
+[![License type](https://img.shields.io/github/license/jonasraoni/mostCited)](https://github.com/jonasraoni/mostCited/blob/main/LICENSE)
+[![Number of downloads](https://img.shields.io/github/downloads/jonasraoni/mostCited/total)](https://github.com/jonasraoni/mostCited/releases)
+[![Commit activity per year](https://img.shields.io/github/commit-activity/y/jonasraoni/mostCited)](https://github.com/jonasraoni/mostCited/graphs/code-frequency)
+[![Contributors](https://img.shields.io/github/contributors-anon/jonasraoni/mostCited)](https://github.com/jonasraoni/mostCited/graphs/contributors)
 
 ### Compatibility
 OJS 3.4
