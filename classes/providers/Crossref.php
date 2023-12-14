@@ -28,12 +28,16 @@ class Crossref implements ProviderInterface
     /**
      * @copydoc ProviderInterface::getCitationCount()
      */
-    public function getCitationCount(string $doi, Settings $settings): ?int
+    public function getCitationCount(string $doi, Settings $settings): int
     {
         $user = $settings->crossrefUser ?? null;
         $password = $settings->crossrefPassword ?? null;
+        $role = $settings->crossrefRole ?? null;
         if (empty($user) || empty($password) || empty($doi)) {
             throw new InvalidArgumentException('Credentials or DOI missing');
+        }
+        if (strlen($role ?? '')) {
+            $user = "{$user}/{$role}";
         }
         $url = sprintf(static::API_URL, urlencode($user), urlencode($password), urlencode($doi));
         $data = HttpClient::get($url, 'application/json');

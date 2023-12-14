@@ -83,6 +83,9 @@ msgstr "Enter here the Crossref username."
 msgid "plugins.generic.mostCited.crossref.password"
 msgstr "Enter here the Crossref password."
 
+msgid "plugins.generic.mostCited.crossref.role"
+msgstr "Enter here the Crossref role (if available)."
+
 msgid "plugins.generic.mostCited.quantity"
 msgstr "Number of Submissions"
 

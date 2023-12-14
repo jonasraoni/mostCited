@@ -27,6 +27,7 @@ class Settings
         public ?string $provider = null,
         public ?string $scopusKey = null,
         public ?string $crossrefUser = null,
+        public ?string $crossrefRole = null,
         public ?string $crossrefPassword = null,
         public ?int $quantity = null,
         public ?int $position = null,

@@ -94,7 +94,7 @@ class SettingsForm extends Form
         $this->plugin->updateSetting($contextId, 'settings', $settings->toJson());
 
         $needsHarvesting = false;
-        foreach (['crossrefPassword', 'crossrefUser', 'provider', 'scopusKey'] as $setting) {
+        foreach (['crossrefPassword', 'crossrefUser', 'crossrefRole', 'provider', 'scopusKey'] as $setting) {
             if ($settings->$setting !== $previousSettings->$setting) {
                 $needsHarvesting = true;
                 break;

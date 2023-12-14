@@ -46,6 +46,7 @@
 		{fbvFormSection id="crossref" class="pkp_helpers_display_none" label="plugins.generic.mostCited.crossref" description="plugins.generic.mostCited.crossref.desc"}
 			{fbvElement type="text" password="true" required="true" id="crossrefUser" class=$citationsCrossrefUserSaved value=$crossrefUser label="plugins.generic.mostCited.crossref.name" inline=true}
 			{fbvElement type="text" password="true" required="true" id="crossrefPassword" class=$citationscrossrefPasswordSaved value=$crossrefPassword label="plugins.generic.mostCited.crossref.password" inline=true}
+			{fbvElement type="text" password="true" id="crossrefRole" class=$citationsCrossrefRoleSaved value=$crossrefRole label="plugins.generic.mostCited.crossref.role" inline=true}
 		{/fbvFormSection}
 		{fbvFormSection title="plugins.generic.mostCited.quantity"}
 			{fbvElement type="text" id="quantity" required="true" class="checkNum" value=$quantity label="plugins.generic.mostCited.quantity.desc"}
