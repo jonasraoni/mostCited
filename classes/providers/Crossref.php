@@ -19,6 +19,7 @@ namespace APP\plugins\generic\mostCited\classes\providers;
 use APP\plugins\generic\mostCited\classes\clients\HttpClient;
 use APP\plugins\generic\mostCited\classes\Settings;
 use Exception;
+use GuzzleHttp\Exception\ClientException;
 use InvalidArgumentException;
 
 class Crossref implements ProviderInterface
@@ -40,7 +41,14 @@ class Crossref implements ProviderInterface
             $user = "{$user}/{$role}";
         }
         $url = sprintf(static::API_URL, urlencode($user), urlencode($password), urlencode($doi));
-        $data = HttpClient::get($url, 'application/json');
+        try {
+            $data = HttpClient::get($url, 'application/json');
+        } catch (ClientException $e) {
+            if ($e->hasResponse() && $e->getResponse()->getStatusCode() === 404) {
+                return 0;
+            }
+            throw $e;
+        }
         $xml = simplexml_load_string($data);
         $links = $xml->query_result->body->forward_link
             ?? throw new Exception('Node query_result.body.forward_link not found, perhaps the API has changed');
