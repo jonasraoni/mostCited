@@ -58,7 +58,7 @@ class Settings
     /**
      * Reads settings from a JSON string
      */
-    public function fromJson(string $settings): static
+    public function fromJson(?string $settings): static
     {
         $this->fromArray(json_decode($settings, true) ?: []);
         return $this;
