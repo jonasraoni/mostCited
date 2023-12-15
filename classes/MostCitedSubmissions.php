@@ -61,6 +61,7 @@ class MostCitedSubmissions
             ->reorder()
             ->join('submission_settings AS mostCited', 'mostCited.submission_id', '=', 's.submission_id')
             ->where('mostCited.setting_name', '=', MostCitedPlugin::CITATION_COUNT_FIELD)
+            ->whereRaw("COALESCE(mostCited.setting_value, '') <> 0")
             ->orderByDesc('mostCited.setting_value')
             ->select('s.submission_id', DB::raw('mostCited.setting_value AS citations'))
             ->get()
