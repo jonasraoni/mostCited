@@ -90,7 +90,7 @@ class MostCitedPlugin extends GenericPlugin
 
     public static function getInstance(): static
     {
-        return static::$instance ??= PluginRegistry::getPlugin('generic', 'mostcitedplugin');
+        return static::$instance ??= PluginRegistry::loadPlugin('generic', 'mostCited');
     }
 
     /**
