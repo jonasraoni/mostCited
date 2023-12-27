@@ -22,6 +22,7 @@ use APP\plugins\generic\mostCited\MostCitedPlugin;
 use Illuminate\Bus\Batchable;
 use InvalidArgumentException;
 use PKP\jobs\BaseJob;
+use PKP\services\PKPSchemaService;
 
 class SynchronizeCitations extends BaseJob
 {
@@ -42,6 +43,7 @@ class SynchronizeCitations extends BaseJob
      */
     public function handle(): void
     {
+        MostCitedPlugin::setupSubmissionFields();
         $settings = MostCitedPlugin::getSettings($this->contextId);
         foreach ($this->submissionIds as $submissionId) {
             $submission = Repo::submission()->get($submissionId);

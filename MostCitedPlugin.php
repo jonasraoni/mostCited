@@ -33,6 +33,7 @@ use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
+use PKP\services\PKPSchemaService;
 
 class MostCitedPlugin extends GenericPlugin
 {
@@ -46,7 +47,7 @@ class MostCitedPlugin extends GenericPlugin
     public function __construct()
     {
         parent::__construct();
-        self::$instance ??= $this;
+        static::$instance ??= $this;
     }
 
     /**
@@ -96,16 +97,22 @@ class MostCitedPlugin extends GenericPlugin
     /**
      * Setups the citationCount field at the submission DAO
      */
-    private function setupSubmissionFields(string $hookName, array $args): bool
+    public static function setupSubmissionFields(): void
     {
-        /** @var object $schema */
-        [$schema] = $args;
-        $schema->properties->{static::CITATION_COUNT_FIELD} = (object) [
-            'type' => 'integer',
-            'apiSummary' => true,
-            'validation' => ['nullable'],
-        ];
-        return Hook::CONTINUE;
+        Hook::add('Schema::get::' . Repo::submission()->dao->schema, function (string $hookName, array $args): bool {
+            /** @var object $schema */
+            [$schema] = $args;
+            $schema->properties->{static::CITATION_COUNT_FIELD} = (object) [
+                'type' => 'integer',
+                'apiSummary' => true,
+                'validation' => ['nullable'],
+            ];
+            return Hook::CONTINUE;
+        });
+        // Force schema reload
+        /** @var PKPSchemaService $schemaService */
+        $schemaService = app(PKPSchemaService::class);
+        $schemaService->get('submission', true);
     }
 
     /**
@@ -147,7 +154,6 @@ class MostCitedPlugin extends GenericPlugin
     {
         Hook::add('AcronPlugin::parseCronTab', $this->setupAcronTask(...));
         Hook::add('Templates::Index::journal', $this->appendMostCitedSubmissions(...));
-        Hook::add('Schema::get::' . Repo::submission()->dao->schema, $this->setupSubmissionFields(...));
     }
 
     /**
