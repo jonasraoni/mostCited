@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13T13:41:46+00:00\n"
+"PO-Revision-Date: 2024-03-18 15:37+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "plugins.generic.mostCited.scheduledTask"
+msgstr "Mais citados"
+
+msgid "plugins.generic.mostCited.title"
+msgstr "Conteúdos mais citados"
+
+msgid "plugins.generic.mostCited.desc"
+msgstr ""
+"Este plugin exibe as submissões mais citadas juntamente com o número total "
+"de citações recebidas no Scopus, Crossref ou Europe PMC na página principal "
+"da revista."
+
+msgid "plugins.generic.mostCited.header.default"
+msgstr "Conteúdos mais citados"
+
+msgid "plugins.generic.mostCited.header"
+msgstr "Cabeçalho da seção"
+
+msgid "plugins.generic.mostCited.header.desc"
+msgstr ""
+"Este é o campo para o título que encabeça a seção dos conteúdos mais "
+"citados. Para que o sistema exiba o título  \"Conteúdos mais citados\", "
+"deixe este campo em branco."
+
+msgid "plugins.generic.mostCited.position"
+msgstr "Local de visualização"
+
+msgid "plugins.generic.mostCited.position.desc"
+msgstr ""
+"Se você ativar esta opção, o plugin tentará mostrar a seção dos conteúdos "
+"mais citados na parte inferior da página principal da revista. Pode ser que "
+"isso não funcione em todos os temas."
+
+msgid "plugins.generic.mostCited.position.check"
+msgstr ""
+"Tentar mover a seção dos conteúdos mais citados para a parte inferior da "
+"página principal da revista."
+
+msgid "plugins.generic.mostCited.provider"
+msgstr "Base de dados"
+
+msgid "plugins.generic.mostCited.provider.desc"
+msgstr "Selecione entre Crossref, Scopus ou Europe PMC."
+
+msgid "plugins.generic.mostCited.provider.scopus"
+msgstr "Scopus"
+
+msgid "plugins.generic.mostCited.provider.crossref"
+msgstr "Crossref"
+
+msgid "plugins.generic.mostCited.provider.europepmc"
+msgstr "Europe PMC"
+
+msgid "plugins.generic.mostCited.api.desc"
+msgstr ""
+"Os seguintes campos são destinados para as credenciais da API. Uma vez "
+"inseridas, elas ficam guardadas e não são mostradas por razões de segurança. "
+"Não é necessário inserir suas credenciais novamente, pois serão utilizadas "
+"as que já estão guardadas. Se no sistema já foram guardadas as credenciais, "
+"os campos para inseri-las aparecerão marcados com uma borda azul."
+
+msgid "plugins.generic.mostCited.scopus"
+msgstr "Scopus"
+
+msgid "plugins.generic.mostCited.scopus.desc"
+msgstr ""
+"Para usar as métricas de citação do Scopus, você precisará de uma API Key. "
+"Se ainda não tiver uma, pode solicitar uma  <a href=\"https://dev.elsevier."
+"com/sc_apis.html\" target=\"_blank\">aqui</a> (gratuitamente)"
+
+msgid "plugins.generic.mostCited.scopus.key"
+msgstr "Insira aqui sua API Key do Scopus."
+
+msgid "plugins.generic.mostCited.crossref"
+msgstr "CrossRef"
+
+msgid "plugins.generic.mostCited.crossref.desc"
+msgstr ""
+"Para acessar o Crossref, você precisa de uma <a href=\"https://www.crossref."
+"org/membership/\" target=\"_blank\">membro</a> Isso pode implicar alguma <a "
+"href=\"https://www.crossref.org/fees/\" target=\"_blank\">cobrança</a>.<br /"
+">Se você é membro do Crossref, insira suas credenciais aqui.<br /><strong>O "
+"serviço Cited-by está habilitado por padrão para todos os membros e prefixos "
+"do Crossref.</strong>"
+
+msgid "plugins.generic.mostCited.crossref.name"
+msgstr "Insira aqui seu usuário do Crossref."
+
+msgid "plugins.generic.mostCited.crossref.password"
+msgstr "Insira aqui sua senha do Crossref."
+
+msgid "plugins.generic.mostCited.crossref.role"
+msgstr "Insira aqui seu papel no Crossref (se aplicável)."
+
+msgid "plugins.generic.mostCited.quantity"
+msgstr "Quantidade de conteúdos"
+
+msgid "plugins.generic.mostCited.quantity.desc"
+msgstr "Quantidade de conteúdos que devem ser visualizados."
