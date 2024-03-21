@@ -50,6 +50,11 @@ class Crossref implements ProviderInterface
             throw $e;
         }
         $xml = simplexml_load_string($data);
+        $body = $xml->query_result->body ?? null;
+        // Empty <body/>
+        if (($body?->asXml()) === '<body/>') {
+            return 0;
+        }
         $links = $xml->query_result->body->forward_link
             ?? throw new Exception('Node query_result.body.forward_link not found, perhaps the API has changed');
         return count($links ?? []);
